@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name="description" content="Online Media Player Without Ads And Without Distraction Using URL">
+        <link href="./src/logo/logo.ico" type="image/x-icon" rel="shortcut icon" />
+        <title>UrlMediaPlayer - Online Media Player Without Ads And Without Distraction Using URL</title>
+        <link rel="stylesheet" href="./src/css/plyr.css" />
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+        <link href="./src/css/style.css" rel="stylesheet">
+    </head>
+
+    <body id="body-pd" oncontextmenu="false" class="snippet-body">
+
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        </header>
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div> 
+                    <a href="./index.html" class="nav_logo"> <i class='bx bx-movie-play nav_logo-icon'></i> <span class="nav_logo-name">UrlMediaPlayer</span> </a>
+                    <div class="nav_list"> 
+                        <a href="./video.html" class="nav_link active"> <i class='bx bxs-videos bx-flashing nav_icon'></i> <span class="nav_name">Video</span> </a>
+                        <a href="./audio.html" class="nav_link"> <i class='bx bx-podcast bx-spin nav_icon'></i> <span class="nav_name">Audio</span> </a>
+                        <a href="./save.html" class="nav_link"> <i class='bx bxs-save bx-burst nav_icon'></i> <span class="nav_name">LocalURL</span> </a>
+                    </div>
+                </div> 
+                <a target=”_blank” href="https://github.com/ImDevLox/UrlMediaPlayer" class="nav_link"> <i class='bx bxl-github nav_icon'></i> <span class="nav_name">Github</span> </a>
+            </nav>
+        </div>
+
+        <div class="height-100">
+            <center>
+                <br>
+                <div class="input-group mb-3">
+                    <input type="url" id="url" class="form-control" placeholder="Put URL Here (Support Multiple Formats)" aria-label="Put URL Here (MP4)" aria-describedby="startButton">
+                    <button type="button" class="btn btn-success" id="startButton"><i class='bx bxs-movie-play bx-flashing'></i></button>
+                </div>
+                <br>
+                
+                <video style="width: 640; height: 480;" id="player" playsinline controls class="js-player">
+                    <source src="" type="video/mp4" />
+                    <source src="" type="video/webm" />
+                </video>
+            </center>
+        </div>
+        
+        <script src="./src/js/plyr.js"></script>
+        <script src="./src/js/players/video.js"></script>
+        <script src="./src/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="src/js/index.js"></script>
+    </body>
+
+</html>
