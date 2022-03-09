@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
+@font-face {
+  font-family: "openSans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
 
 :root {
   --header-height: 3rem;
@@ -7,27 +10,23 @@
   --first-color-light: #e2e0eb;
   --white-color: #f7f6fb;
   --active-color: rgb(45, 96, 207);
-  --body-font: "Cairo", sans-serif;
+  --body-font: "openSans";
   --normal-font-size: 1rem;
   --z-fixed: 100;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--first-color);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--active-color);
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--white-color);
 }

@@ -5,7 +5,6 @@ let downloadLink = document.getElementById('downloadLink');
 
 var controls = [
     'play-large', // The large play button in the center
-    'restart', // Restart playback
     'rewind', // Rewind by the seek time (default 10 seconds)
     'play', // Play/pause playback
     'fast-forward', // Fast forward by the seek time (default 10 seconds)
@@ -15,25 +14,13 @@ var controls = [
     'mute', // Toggle mute
     'volume', // Volume control
     'settings', // Settings menu
+    'download', // Download
     'airplay', // Airplay (currently Safari only)
-    'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
 ];
 
-function validURL(str) {
-    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-    return !!pattern.test(str);
-};
 
 startButton.onclick = () => {
     let url = srcUrl.value;
-    let validOrNo = validURL(url);
-
-    if(validOrNo == false) return alert("URL NOT VALID\nExample: https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_5MG.mp3");
 
     var player = new Plyr('#player', {
         controls,
